@@ -5,11 +5,11 @@ Este é um sistema de registro de ponto dos funcionários construído com NestJS
 ## Tecnologias Utilizadas
 
 - **NestJS**: Um framework Node.js  para construção de aplicações eficientes, confiáveis e escaláveis.
-- **TypeORM**: Um ORM para TypeScript e JavaScript (ES7, ES6, ES5).
+- **TypeScript**: Um superconjunto sintático estrito de JavaScript que adiciona tipagem estática opcional.
 - **Docker**: Containers para o banco de dados.
 - **PostgreSQL**: Um banco de dados relacional open-source.
 - **Jest**: Um framework de testes JavaScript focado na simplicidade.
-- **TypeScript**: Um superconjunto sintático estrito de JavaScript que adiciona tipagem estática opcional.
+- **TypeORM**: Um ORM para TypeScript e JavaScript (ES7, ES6, ES5).
 
 ## Funcionalidades
 
