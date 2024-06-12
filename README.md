@@ -6,6 +6,7 @@ Este é um sistema de registro de ponto dos funcionários construído com NestJS
 
 - **NestJS**: Um framework Node.js  para construção de aplicações eficientes, confiáveis e escaláveis.
 - **TypeORM**: Um ORM para TypeScript e JavaScript (ES7, ES6, ES5).
+- **Docker**: Containers para o banco de dados.
 - **PostgreSQL**: Um banco de dados relacional open-source.
 - **Jest**: Um framework de testes JavaScript focado na simplicidade.
 - **TypeScript**: Um superconjunto sintático estrito de JavaScript que adiciona tipagem estática opcional.
@@ -33,9 +34,41 @@ Este é um sistema de registro de ponto dos funcionários construído com NestJS
    cd employee-clockin-system
 
 2. Instale as dependências:
-   ```npm install
-
-1. Clone o repositório:
    ```sh
-   git clone https://github.com/seuusuario/employee-clockin-system.git
-   cd employee-clockin-system
+   npm install
+   ```
+
+3. Suba o banco de dados via Docker:
+   ```sh
+   docker-compose up -d
+   ```
+
+4. Inicie a aplicação NestJS:
+   ```sh
+   npm run start
+   ```
+
+5. Para modo de desenvolvimento com recarregamento automático:
+   ```sh
+   npm run start:dev
+  ```
+
+
+
+   ### Endpoints da API
+
+#### Funcionários
+
+- **GET /employees**: Recuperar todos os funcionários.
+- **GET /employees/:id**: Recuperar um funcionário pelo ID.
+- **POST /employees**: Criar um novo funcionário.
+  - Corpo da Requisição: `{ "name": "string", "email": "string" }`
+- **PUT /employees/:id**: Atualizar um funcionário pelo ID.
+  - Corpo da Requisição: `{ "name": "string", "email": "string" }`
+- **DELETE /employees/:id**: Excluir um funcionário pelo ID.
+
+#### Registros de Ponto
+
+- **GET /clock-ins**: Recuperar todos os registros de ponto.
+- **GET /clock-ins/employee/:employeeId**: Recuperar todos os registros de ponto para um funcionário específico.
+- **POST /clock-ins/:employeeId**: Registrar um ponto para um funcionário.
